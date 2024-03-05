@@ -20,13 +20,13 @@ class BasicMathOperations:
     def Operation(self, firstnumber, secondnumber, operation):
         self.firstnumber = firstnumber
         self.secondnumber = secondnumber
-        if operation == add:
+        if operation == "add":
             self.result = self.firstnumber + self.secondnumber
-        elif operation == subtract:
+        elif operation == "subtract":
             self.result = self.firstnumber - self.secondnumber
-        elif operation == multiply:
+        elif operation == "multiply":
             self.result = self.firstnumber * self.secondnumber
-        elif operation == divide:
+        elif operation == "divide":
             self.result = self.firstnumber / self.secondnumber
         else:
             print("Error! Operation not recognized!")
@@ -38,4 +38,6 @@ class BasicMathOperations:
     def Square(self, number):
         self.number = number
         self.square = self.number ** 2
-        print("The square of the number is," self.square)
+        print("The square of the number is", self.square)
+        
+        
