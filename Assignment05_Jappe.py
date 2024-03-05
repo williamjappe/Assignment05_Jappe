@@ -3,7 +3,7 @@ class BasicMathOperations:
     
     #Method for greeting
     def Greet(self, firstname, lastname):
-        self.firstnae = firstname
+        self.firstname = firstname
         self.lastname = lastname
         print("Nice to meet you", self.firstname, self.lastname)
     
@@ -40,4 +40,19 @@ class BasicMathOperations:
         self.square = self.number ** 2
         print("The square of the number is", self.square)
         
+    #Method for factorial
+    def Factorial(self, number):
+        self.number = number
+        self.factorial = self.number
+        for x in range(1, self.number):
+            self.factorial = self.factorial * x
+        print("The factorial of the number is", self.factorial)
         
+    #Method for counting
+    def Count(self, startnumber, endnumber):
+        self.startnumber = startnumber
+        self.endnumber = endnumber
+        for x in range(self.startnumber, self.endnumber + 1):
+            print (x)
+    
+    
