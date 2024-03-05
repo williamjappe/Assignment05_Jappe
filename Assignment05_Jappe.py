@@ -18,8 +18,8 @@ class BasicMathOperations:
     
     #Method for operations
     def Operation(self, firstnumber, secondnumber, operation):
-        self.firstnumber = float(firstnumber)
-        self.secondnumber = float(secondnumber)
+        self.firstnumber = firstnumber
+        self.secondnumber = secondnumber
         if operation == "add":
             self.result = self.firstnumber + self.secondnumber
         elif operation == "subtract":
@@ -84,5 +84,92 @@ class BasicMathOperations:
         self.argument = argument
         self.type = type(self.argument)
         print("The type of the argument is", self.type)
+
+#Creating the instance
+instance = BasicMathOperations()
+
+#Introduction message
+print("""List of Tasks:
+      1. Greet
+      2. Add two numbers
+      3. Various math operations
+      4. Square a number
+      5. Compute the factorial of a number
+      6. Count
+      7. Calculate the hypotenuse of a base and perpendicular
+      8. Calculate the area of a rectangle
+      9. Compute the power of a number
+      10. Get the type of an argument
+      
+      Type a number to execute a task""")
+
+#Loop for if handle is not recognized
+while (True):
+    task = int(input())
+
+    if task == 1:
+        print("What is your first name?")
+        firstname = input()
+        print("What is your last name?")
+        lastname = input()
+        instance.Greet(firstname, lastname)
+        break
+    elif task == 2:
+        instance.Add()
+        break
+    elif task == 3:
+        print("What is the first number?")
+        firstnumber = float(input())
+        print("What is the second number?")
+        secondnumber = float(input())
+        print("What operation do you want performed (add, subtract, multiply, divide)?")
+        operation = input()
+        instance.Operation(firstnumber, secondnumber, operation)
+        break
+    elif task == 4:
+        print("What number would you like squared?")
+        number = float(input())
+        instance.Square(number)
+        break
+    elif task == 5:
+        print("What is the number?")
+        number = int(input())
+        instance.Factorial(number)
+        break
+    elif task == 6:
+        print("What is the start number?")
+        startnumber = int(input())
+        print("What is the end number?")
+        endnumber = int(input())
+        instance.Count(startnumber, endnumber)
+        break
+    elif task == 7:
+        print("What is the base?")
+        base = float(input())
+        print("What is the perpendicular?")
+        perpendicular = float(input())
+        instance.calculateHypotenuse(base, perpendicular)
+        break
+    elif task == 8:
+        print("What is the width?")
+        width = float(input())
+        print("What is the height?")
+        height = float(input())
+        instance.Area(width, height)
+        break
+    elif task == 9:
+        print("What is the base?")
+        base = float(input())
+        print("What is the power?")
+        power = float(input())
+        instance.Power(base, power)
+        break
+    elif task == 10:
+        print("Please type the argument:")
+        argument = input()
+        instance.Type(argument)
+        break
     
-test = BasicMathOperations()
+    #If task handle is not in range of 1 to 10
+    else:
+        print("Error! Task handle is not recognized! Try again!")
