@@ -72,5 +72,17 @@ class BasicMathOperations:
         self.area = self.width * self.height
         print("The area of the rectangle is", self.area)
     
+    #Method for power
+    def Power(self, base, power):
+        self.base = base
+        self.power = power
+        self.result = self.base ** self.power
+        print("The result is", self.result)
+    
+    #Method for type
+    def Type(self, argument):
+        self.argument = argument
+        self.type = type(self.argument)
+        print("The type of the argument is", self.type)
     
 test = BasicMathOperations()
